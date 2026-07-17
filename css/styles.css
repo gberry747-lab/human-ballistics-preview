@@ -369,16 +369,29 @@ img { max-width: 100%; display: block; }
   border-radius: 10px; padding: 16px 20px; color: var(--ink);
 }
 
-/* ---------- Photo hero (real cockpit-at-dusk image behind the gradient) ---------- */
+/* ---------- Photo hero (a real image behind the brand gradient) ----------
+   Each page sets its own background-image inline on the .hero--photo section,
+   for example: <section class="hero hero--photo" style="background-image:url('assets/xxx.jpg')">
+   The ::before overlay keeps the same darkening gradient and orange glow on
+   every page, so the heroes feel uniform while each photo differs.            */
 .hero--photo {
-  background:
-    radial-gradient(1100px 480px at 80% -12%, rgba(255,106,43,0.32), transparent 60%),
-    linear-gradient(155deg, rgba(6,23,51,0.90) 0%, rgba(10,32,66,0.82) 48%, rgba(16,52,104,0.72) 100%),
-    url("../assets/hero-cockpit-dusk.jpg");
-  background-size: auto, auto, cover;
-  background-position: center, center, center 38%;
+  position: relative;
+  isolation: isolate;
+  background-size: cover;
+  background-position: center 40%;
   background-repeat: no-repeat;
 }
+.hero--photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(1100px 480px at 80% -12%, rgba(255,106,43,0.30), transparent 60%),
+    linear-gradient(155deg, rgba(6,23,51,0.90) 0%, rgba(10,32,66,0.82) 48%, rgba(16,52,104,0.72) 100%);
+}
+.hero--photo > .container { position: relative; z-index: 1; }
 
 /* ---------- Images ---------- */
 .figure-img {
