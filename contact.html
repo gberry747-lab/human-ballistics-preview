@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Booking | Human Ballistics</title>
+  <meta name="description" content="Register your interest in the Performance Course, the online membership, one-on-one coaching, Fly Calm or CRM training. Based in Perth, Western Australia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .form-field { margin-bottom: 18px; }
+    .form-field label { display:block; font-weight:600; color:var(--navy); margin-bottom:6px; font-size:0.95rem; }
+    .form-field input, .form-field select, .form-field textarea {
+      width:100%; padding:13px 15px; border:1px solid var(--line); border-radius:10px;
+      font-family:var(--font-body); font-size:1rem; background:var(--white); color:var(--ink);
+    }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      outline:none; border-color:var(--amber); box-shadow:0 0 0 3px rgba(232,161,58,0.18);
+    }
+    .form-field textarea { min-height:130px; resize:vertical; }
+    .contact-grid { display:grid; grid-template-columns:1.3fr 1fr; gap:44px; align-items:start; }
+    @media (max-width:900px){ .contact-grid{ grid-template-columns:1fr; } }
+    .contact-detail { display:flex; gap:14px; align-items:flex-start; margin-bottom:22px; }
+    .contact-detail .icon {
+      width:44px;height:44px;border-radius:10px;flex:0 0 auto;
+      background:rgba(232,161,58,0.16);color:var(--amber-dark);
+      display:grid;place-items:center;font-size:1.2rem;
+    }
+    .contact-detail h4 { margin:0 0 2px; }
+    .contact-detail p { margin:0; color:var(--muted); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="mark">HB</span> Human Ballistics</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="performance-course.html">Performance Course</a></li>
+        <li><a href="crm-humanfactors.html">CRM &amp; Human Factors</a></li>
+        <li><a href="fly-calm.html">Fly Calm</a></li>
+        <li><a href="membership.html">Membership</a></li>
+        <li><a href="one-on-one.html">1-on-1</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-cta"><a class="btn btn-primary" href="contact.html">Book a Course</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero" style="padding-bottom:72px">
+    <div class="container">
+      <p class="eyebrow">Get in touch</p>
+      <h1>Let's talk about your next high-stakes moment.</h1>
+      <p class="lead">Register your interest, ask a question, or arrange a session. Ray reads every message personally.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <!-- IMPORTANT: replace the action URL below with your Formspree form ID.
+               1. Create a free form at https://formspree.io
+               2. Paste your endpoint, e.g. https://formspree.io/f/abcdwxyz  -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-field">
+              <label for="interest">What are you interested in?</label>
+              <select id="interest" name="interest">
+                <option>The Performance Course</option>
+                <option>Online membership</option>
+                <option>One-on-one coaching</option>
+                <option>Fly Calm (fear of flying)</option>
+                <option>CRM &amp; Human Factors for my team</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" placeholder="Tell Ray a little about your situation, and any dates you have in mind."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Send message</button>
+            <p style="font-size:0.85rem;color:var(--muted);margin-top:12px">Your details are used only to reply to you. No spam, ever.</p>
+          </form>
+        </div>
+        <div>
+          <div class="card">
+            <h3 style="margin-top:0">Direct contact</h3>
+            <div class="contact-detail">
+              <div class="icon">&#9993;</div>
+              <div><h4>Email</h4><p><a href="mailto:info@humanballistics.com">info@humanballistics.com</a></p></div>
+            </div>
+            <div class="contact-detail">
+              <div class="icon">&#128205;</div>
+              <div><h4>Based in</h4><p>Perth, Western Australia</p></div>
+            </div>
+            <div class="contact-detail">
+              <div class="icon">&#127760;</div>
+              <div><h4>Delivered</h4><p>Across Australia and New Zealand, and online worldwide over Zoom.</p></div>
+            </div>
+            <div class="note" style="margin-top:8px">
+              <strong>Next Performance Course:</strong> Brisbane, 11 to 12 August. Twelve seats only. Register your interest early.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="margin-bottom:14px"><span class="mark">HB</span> Human Ballistics</a>
+          <p>Performance psychology for people who are judged under pressure. Founded by Captain Ray Werndly. Based in Perth, Western Australia.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="performance-course.html">Performance Course</a>
+          <a href="crm-humanfactors.html">CRM &amp; Human Factors</a>
+          <a href="fly-calm.html">Fly Calm</a>
+          <a href="membership.html">Membership</a>
+          <a href="one-on-one.html">One-on-one</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About Ray</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="contact.html">Contact &amp; booking</a>
+        </div>
+      </div>
+      <!-- REBRAND NOTE: when the business is renamed, replace "Human Ballistics" and the "HB" monogram everywhere, and turn the line below into: Formerly Human Ballistics (humanballistics.com). -->
+      <div class="footer-bottom">
+        <span>&copy; <span class="year">2026</span> Human Ballistics. All rights reserved.</span>
+        <span>Perth, Western Australia</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
