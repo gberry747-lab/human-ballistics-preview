@@ -40,6 +40,10 @@ The brand appears in a small number of obvious places:
 
 Ask Claude to "find and replace the brand name across all pages" once the name is decided. There is a `REBRAND NOTE` comment in each page footer marking where to add the line **"Formerly Human Ballistics (humanballistics.com)"** so past customers recognise the site.
 
+## About the photos (`assets/` folder)
+- The cockpit, performance-curve, throttle and flag images came from Ray's original website.
+- The two-pilot crew photo (CRM page), the online video-call photo (Membership page) and the calm window view (Fly Calm page) are free-license stock photos from Pexels and Unsplash. They are free to use commercially with no attribution required, so they are safe to keep. Even so, real photos of Ray and his actual courses would be stronger, so swap them in whenever you have them: just ask your Claude to "replace the photo on the [page name] with this one."
+
 ## Notes
 - Fonts load from Google Fonts (Fraunces and Inter). This needs an internet connection, which any hosted site has.
 - No tracking or analytics is included yet. Add Google Analytics or a privacy-friendly alternative later if wanted.
