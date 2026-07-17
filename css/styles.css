@@ -401,7 +401,13 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow);
 }
 .figure-dark img { width: 100%; border-radius: 8px; display: block; }
-.media-round { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; object-fit: cover; }
+.media-round { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+/* Wide cinematic banner (e.g. an airliner across the top of a page) */
+.banner-img {
+  width: 100%; aspect-ratio: 3 / 1; object-fit: cover; object-position: center 45%;
+  border-radius: var(--radius); box-shadow: var(--shadow); display: block;
+}
+@media (max-width: 700px) { .banner-img { aspect-ratio: 16 / 10; } }
 
 /* Small country flag next to a heading */
 .flag {
